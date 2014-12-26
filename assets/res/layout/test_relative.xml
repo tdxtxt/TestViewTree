@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="谢谢合作" />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/text"
+        android:text="在吗" />
+
+    <Button
+        android:id="@+id/btn_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:layout_alignBaseline="@+id/btn_start"
+        android:layout_toRightOf="@+id/btn_start"
+        android:layout_alignParentRight="true"
+        android:text="我在" />
+    
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/x01"
+        android:layout_below="@+id/btn_start"/>
+    
+    <!--
+	1.设置layout_width和layout_height参数时候必须用-1（fill_parent）、-2（wrap_content）
+	2.在用相对布局时候，设置有关相对位置的属性无效，待解决    -->
+</RelativeLayout>
